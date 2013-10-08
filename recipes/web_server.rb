@@ -9,8 +9,8 @@
 include_recipe "apt"
 
 # Add repositories
-apt_repository "php55" do
-	uri "http://ppa.launchpad.net/ondrej/php5/ubuntu"
+apt_repository "php54" do
+	uri "http://ppa.launchpad.net/ondrej/php5-oldstable/ubuntu"
 	distribution node['lsb']['codename']
 	components ["main"]
 	keyserver "keyserver.ubuntu.com"

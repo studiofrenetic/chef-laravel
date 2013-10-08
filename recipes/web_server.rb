@@ -17,14 +17,6 @@ apt_repository "php54" do
 	key "E5267A6C"
 end
 
-apt_repository 'apache2' do
-	uri 'http://ppa.launchpad.net/ondrej/apache2/ubuntu'
-	distribution node['lsb']['codename']
-	components ['main']
-	keyserver 'keyserver.ubuntu.com'
-	key 'E5267A6C'
-end
-
 # Install Apache & PHP
 include_recipe "openssl"
 include_recipe "apache2"
